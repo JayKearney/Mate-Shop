@@ -9,7 +9,7 @@ class Category(models.Model) :
     slug = models.SlugField(max_length=200,
                              unique=True)
 
-        def get_absolute_url(self):
+    def get_absolute_url(self):
             return reverse('shop:product_list_by_category',
                             args=[self.slug])
 
